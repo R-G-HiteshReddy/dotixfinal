@@ -24,10 +24,15 @@ export default function Category() {
            display={'flex'}
            alignItems={'flex-start'}
            gap={'10px'}
+           
+
            >
           {
             data.map((el,ind)=>{
-                return <Box key={el.alt} w={'91px'} h={'100px'} borderRadius={'10px'} bg={'#fff'} >
+                return <Box
+                cursor={'pointer'}
+                border={'1px solid #FFAD00'}
+                key={el.alt} w={'91px'} h={'100px'} borderRadius={'10px'} bg={'#fff'} >
               <Heading
               color= '#444'
               textAlign= 'left'

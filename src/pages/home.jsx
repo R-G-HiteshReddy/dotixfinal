@@ -5,7 +5,7 @@ import Category from '../components/category';
 export default function Home() {
   return (
     <div>
-       <chakra.div
+      <chakra.div
         w="full"
 
         h="270px"
@@ -33,27 +33,61 @@ export default function Home() {
           >Hello User</Heading>
           <Avatar border={'3px solid white'} w={'38px'} h={'38px'} src='https://bit.ly/broken-link' />
         </Box>
-        <Box w={'293px'} h={'143px'} m={'0 22px'} mt={'30px'} 
+        <Box w={'293px'} h={'143px'} m={'0 22px'} mt={'30px'}
         >
           <Heading
-          color= '#FFF'
-          textAlign= 'left'
+            color='#FFF'
+            textAlign='left'
+            fontFamily='Poppins'
+            fontSize='15px'
+            fontStyle='normal'
+            fontWeight='600'
+            lineHeight='normal'
+          >Popular</Heading>
+
+          <Box mt={'20px'}>
+            <Category />
+          </Box>
+
+
+        </Box>
+      </chakra.div>
+      <Box m={'auto'} mt={'20px'} display={'flex'}
+          w={'293px'}
+          justifyContent={'space-between'}
+          alignItems={'flex-start'}>
+          <Heading 
+          color= '#373737'
+          textAlign= 'center'
           fontFamily= 'Poppins'
           fontSize= '15px'
           fontStyle= 'normal'
           fontWeight= '600'
-          lineHeight= 'normal'
-          >Popular</Heading>
+          lineheight= 'normal'
+          >Explore</Heading>
+          <Heading 
+          color= '#373737'
+          textAlign= 'center'
+          fontFamily= 'Poppins'
+          fontSize= '12px'
+          fontStyle= 'normal'
+          fontWeight= '500'
+          lineheight= 'normal'
+          >View all</Heading>
 
-        <Box mt={'20px'}>
-        <Category />
         </Box>
-          
-
+        <Box display={'flex'} mt={'10px'} justifyContent={'center'} >
+          <Category/>
+        </Box>
+        <Box display={'flex'} mt={'10px'} justifyContent={'center'} >
+          <Category/>
         </Box>
         
-
-      </chakra.div>
+        <Box display={'flex'} mt={'10px'} justifyContent={'center'} >
+          <Category/>
+        </Box>
+        
+        
     </div>
   )
 }
