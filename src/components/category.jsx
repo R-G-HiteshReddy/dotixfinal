@@ -3,21 +3,29 @@ import { Box,Heading,Image } from '@chakra-ui/react'
 import space from '../data/space.jpg'
 import sports from '../data/sports.jpg'
 import history from '../data/history.jpg'
+import { useNavigate } from 'react-router-dom'
 let data=[
     {
         alt:'Space',
-        image:space
+        image:space,
+        id:9
     },
     {
         alt:'History',
-        image:history
+        image:history,
+        id:23
     },{
         alt:'Sports',
-        image:sports
+        image:sports,
+        id:21
     }
 ]
 
 export default function Category() {
+  let navigate=useNavigate()
+  let handelclick=(e,el,ind)=>{
+    navigate(`/quiz/${el.id}`)
+  }
   return (
     <div>
       <Box
@@ -30,6 +38,9 @@ export default function Category() {
           {
             data.map((el,ind)=>{
                 return <Box
+                onClick={(e)=>{
+                  handelclick(e,el,ind)
+                }}
                 cursor={'pointer'}
                 border={'1px solid #FFAD00'}
                 key={el.alt} w={'91px'} h={'100px'} borderRadius={'10px'} bg={'#fff'} >

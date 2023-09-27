@@ -83,7 +83,7 @@ export default function Home() {
           <Category/>
         </Box>
         
-        <Box display={'flex'} mt={'10px'} justifyContent={'center'} >
+        <Box mb={'37px'} display={'flex'} mt={'10px'} justifyContent={'center'} >
           <Category/>
         </Box>
         
